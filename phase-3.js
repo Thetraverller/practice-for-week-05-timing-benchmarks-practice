@@ -5,16 +5,42 @@ function addNums10Timing(increment) {
   // Then, add timing code
 
   // Your code here
+  let results = [];
 
+  for (let i = increment; i <= 10 * increment; i += increment) {
+    console.time(`Timer for increment ${i}`);
+    let startTime = Date.now();
+
+    let result = addNums(i);
+
+    let endTime = Date.now();
+    console.timeEnd(`Timer for increment ${i}`);
+    console.log(`Runtime: ${endTime - startTime}ms`);
+
+    results.push(result);
+  }
 }
 
 
 function addManyNums10Timing(increment) {
-// Copy your `addManyNums10` code here
-// Then, add timing code
+  // Copy your `addManyNums10` code here
+  // Then, add timing code
 
   // Your code here
+  let results = [];
 
+  for (let i = increment; i <= 10 * increment; i += increment) {
+    console.time(`Timer for increment ${i}`);
+    let startTime = Date.now();
+
+    let result = addManyNums(i);
+
+    let endTime = Date.now();
+    console.timeEnd(`Timer for increment ${i}`);
+    console.log(`Runtime: ${endTime - startTime}ms`);
+
+    results.push(result);
+  }
 }
 
 
